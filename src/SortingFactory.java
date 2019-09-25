@@ -5,7 +5,7 @@ public class SortingFactory {
 	public final String defaultAlgorithm = "InsertionSort";  // If an improper algorithm name is given, which should be used?
 	public boolean useDefault = false;   // ... and should it be done?
 
-	
+
 	/**
 	 * Constructor
 	 * @param returnDefault
@@ -14,8 +14,8 @@ public class SortingFactory {
 		// If the client does not provide a proper algorithm name: use the default, or return an error?
 		useDefault = returnDefault;
 	}
-	
-	
+
+
 	/**
 	 * Gets a SortingAlgorithm instance according to the parameter.
 	 * @param algoName Sorting algorithm name; one of: selection, bubble, insertion, quick, merge.
@@ -34,7 +34,7 @@ public class SortingFactory {
 		if (lowercaseAlgoName.contains("insertion")) {
 			return new InsertionSort();
 		}
-		
+
 		// Invalid algorithm name specified. Use default?
 		if (useDefault) {
 			System.out.println("Invalid algorithm name " + algoName + ". Returning " + defaultAlgorithm);
